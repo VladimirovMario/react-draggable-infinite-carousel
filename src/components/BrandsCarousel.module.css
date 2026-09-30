@@ -1,0 +1,15 @@
+.brands {
+  margin: 0 auto;
+  max-width: 64rem;
+  padding: 3rem 1.375rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}

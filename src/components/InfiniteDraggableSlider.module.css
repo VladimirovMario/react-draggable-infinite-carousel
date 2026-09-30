@@ -1,0 +1,58 @@
+/* Styles applied only when the scroller has animation enabled */
+.scroller {
+  overflow: hidden;
+
+  /* Apply a fade effect on the edges so slides smoothly enter/exit view */
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    #faf9f6 20%,
+    #faf9f6 80%,
+    transparent
+  );
+  mask: linear-gradient(
+    90deg,
+    transparent,
+    #faf9f6 20%,
+    #faf9f6 80%,
+    transparent
+  );
+}
+
+.scroller .inner-scroller {
+  width: max-content;
+  flex-wrap: nowrap;
+}
+
+.inner-scroller {
+  margin-block: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.inner_scroller:active {
+  cursor: grabbing;
+}
+
+.slide {
+  --shadow-color: #595959;
+  position: relative;
+  width: 16.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.25rem 2rem var(--shadow-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .slide {
+    --shadow-color: #969696;
+  }
+}
