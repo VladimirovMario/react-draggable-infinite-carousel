@@ -1,0 +1,25 @@
+:root {
+  --color-body: #faf9f6;
+  --color-text: #595959;
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  font: 1rem var(--font-sans);
+  color-scheme: light dark;
+  color: var(--color-text);
+  background-color: var(--color-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-body: #16171d;
+    --color-text: #969696;
+  }
+}
+
+main {
+  min-height: 100vh;
+}
